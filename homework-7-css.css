@@ -1,0 +1,14 @@
+body {
+    background-color: wheat
+}
+h1 {
+    color: darkcyan
+}
+function makeChoice() {
+    let choice = "No";
+    let dayNum = (new Date()).getDay();
+    if ((dayNum === 1)) {
+        choice = "Yes";
+    }
+    return choice;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Homework 7, CSC 235</title>
+        <script src="homework-7-css.css"></script>
+        <script>
+function circleArea(radius) {
+    return Math.PI * radius ** 2;
+}
+function insertCircleArea(element, radius) {
+    element.innerHTML = 'Area: ' + circleArea(radius);
+}
+        </script>
+        <style>
+            #radius { width: 4em; }
+        </style>
+        <link rel="stylesheet" href="homework-7-css.css" type="text/css" />
+    </head>
+    <body>
+        <h1>Homework 7</h1>
+        <form>
+            <label for="radius">Circle radius:</label>
+            <input type="number" min="0" value="-" id="radius" />
+            <span id="area_target"></span>
+            <button onclick="insertCircleArea(this.previousElementSibling,
+                            document.querySelector('#radius').value;"
+                    type="button">Find area</button>
+        </form>
+        <p>Is today Monday? <span id="class_answer"></span></p>
+        <script>
+            document.querySelector('#class_answer').innerHTML = makeChoice() + '.';
+        </script>
+        <noscript><code>
+            document.querySelector('#class_answer').innerHTML = makeChoice() + '.';
+        </code></noscript>
+        
+    </body>
+</html>
